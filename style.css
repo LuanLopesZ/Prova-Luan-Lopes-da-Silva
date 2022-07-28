@@ -1,0 +1,336 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #FFBA00;
+    
+}
+
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'karla',sans-serif;
+    position: relative;
+}
+
+header{
+    background-color: var(--primary-color);
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    box-shadow: 0 1px 2px #ccc;
+}
+
+.header-title{
+    color: black;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin: 5vh auto;
+    padding:  20px;
+    box-shadow:  2px 2px 10px;   
+    gap: 20px;
+  
+}
+
+.box_pesquisa{
+    position: relative;
+    margin-bottom: 5px;
+    padding: 0;
+    margin-left: 0;
+   }
+   .texto_pesquisa {
+    float: center;
+    padding: 0;
+    color: rgb(8, 3, 3);
+    font-size: 14px;
+    top: 5%;
+    right:16%;
+    text-align: center;
+}
+
+   .botao_pesquisa{
+    left: 140px;
+    color: #00a8ff;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    }
+
+/* tabela */
+
+.records{
+    width: 100%;
+    user-select: none;
+    text-align: left;
+}
+.records th{
+    height: 50px;
+    background-color: var(--primary-color);
+    padding-left: 20px;
+    font-size: 1.2rem;
+}
+
+.records td{
+    height: 50px;
+    padding-left: 20px;
+}
+
+.records td:last-child{
+    padding: 0;
+    min-width: 150px;
+    text-align: center;
+}
+
+.records tr:hover{
+    background-color: rgb(235, 231, 231); 
+
+}
+
+/* Botões */
+#bt_cadastro {
+    border-style: none;
+    height: 40px;
+    padding: 6px 12px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow .6s ease;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#bt_cadastro.blue{
+    background-color: #1FB6FF;
+}
+button:hover{
+    box-shadow: inset 200px 0 0 #00000055;
+}
+
+#bt_edit {
+    border-style: none;
+    height: 40px;
+    padding: 6px 12px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow .6s ease;
+    background-color: #13ce66;
+
+}
+
+#bt_exc{
+    border-style: none;
+    height: 40px;
+    padding: 6px 12px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow .6s ease;
+    background-color: #ff4949;
+}
+
+
+
+footer{
+    width: 100;
+    text-align: center;
+    font-weight: 200;
+    font-style: italic;
+    padding: 20px;
+}
+
+.modalu{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000090;
+    opacity: 0;
+    z-index: -1;
+}
+
+.modalu.active{
+    opacity: 1;
+    z-index: 1;
+
+}
+
+.modalu-content{
+   display: block;
+   gap: 20px;
+   width:  50vw;
+   margin: 15vh auto;
+   background-color: white;
+   box-shadow:  1px 1px 10px black;
+}
+
+
+.modalu-form{
+    display: inline-block;
+    padding: 10px;
+    background-color: white;
+ }
+
+.modalu-header{
+    display: block;
+    position: relative;
+    justify-content: center;
+    height: 70px;
+    line-height: 40px;
+    font-size: 1rem;
+}
+.modalu-header>span{
+    position: absolute;
+    right: 0;
+}
+
+#modaluClose{
+    position: absolute;
+    right: 0;
+    display: block;
+    width: 60px;
+    height: 70px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+#modaluClose:hover{
+    background-color: #ff4949;
+    color: white
+}
+
+.modalu-form{
+    display: block;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.fabricante{
+    top: 10px;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    padding: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.produto{
+
+    float: left;
+}
+.modalu-field{
+    width: calc(50% - 10px);
+    height: 20px;
+    outline-style: none;
+    border-style: none;
+    box-shadow:  0 0 2px black;
+    padding:  0 5px;
+    font-size: 1.5rem;
+}
+.modalu-field:focus{
+    border:  2px solid var(--primary-color);
+    box-shadow: 0 0 3px var(--primary-color);
+}
+
+.modalu-footer{
+    background-color: inherit;
+    text-align: right;
+    padding: 0 20px;
+}
+@media(max-width:480px){
+.header{
+    position:  fixed;
+}
+.header-title{
+    font-size: 1.5rem;
+}
+main{
+    padding: 0;
+    margin: 20px 0 0 0;
+    width:  100%;
+    box-shadow: none;
+}
+.button.mobile{
+   color: transparent;
+   font-size: 0;
+   width:  50px;
+   height: 50px;
+   border-radius:  50%;
+   position: fixed;
+   top: 90vh;
+   left: 80vw;
+}
+.button.mobile::before{
+    content: "+";
+    color: black;
+    font-size: 2rem;
+    width: 100%;
+    height: 100%;
+
+}
+.records{
+    border-spacing: 5px;
+    }
+
+    .records thead{
+        display: none;
+    }
+
+    .records tr{
+        box-shadow:  0 1px 3px ;
+    }
+
+    .records td:not(:first-child){
+        display: flex;
+        justify-content: space-between;
+        padding:  0 20px;
+    }
+
+    .records td{
+        margin: 10px 0;
+
+    }
+
+    .records tr:hover{
+        background-color: indianred;
+    }
+
+    .modalu{
+        top: 100%;
+        transition:  all 1s ease;
+
+    }
+
+    .modalu.active{
+        top: 0;
+    }
+
+    .modalu-content{
+        margin: 0;
+        width: 100%;
+        position: fixed;
+    }
+
+    .modalu-flied{
+        width: 100%;
+    }
+}
+
+
+
+

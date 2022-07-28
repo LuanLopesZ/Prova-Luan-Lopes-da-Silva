@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Prova Loja Interativa</title>
+    <meta author="Luan Lopes da Silva">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" media="only screen and (min-width: 480px) and (max-width: 767px)"
+  href="styles.css"/>
+  <link rel="stylesheet" media="only screen and (orientation: landscape)" href="styles.css"/>
+  <link rel="stylesheet" media="only print and (color)" href="color-pages.css"/>
+  <link rel="stylesheet" media="only print and (monochrome)" href="monochrome-pages.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  
+  
+  <link rel="stylesheet" href="global.css" media="screen"/>
+
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- JQUERY -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+
+
+  <!-- ESTILOS PARA ESTA PÁGINA -->
+  <!-- Nesse caso, este estilo é apenas para inserir imagens -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <header >
+        <h1 class="header-title">Produtos</h1>
+    </header>
+
+    <main>
+        <div class="box_pesquisa">
+            <input class="texto_pesquisa" type="text" name="" placeholder="Busca "/>
+            <a class="botao_pesquisa" href="#"><span class="material-icons">
+                search
+                </span></a>
+                </div>
+      
+        <table id="tblDados" class="records">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome Produto</th>
+                    <th>Fabricante</th>
+                    <th>Categoria</th>
+                    <th>Preço</th>
+
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                 
+                <td>O1</td>
+                <td>Nescau</td>
+                <td>Nestlé</td>
+                <td>Achocolatado</td>
+                <td>$ 5,00</td>
+                <td>
+                <button id="bt_edit" class="green" type="button">editar</button>
+                <button id="bt_exc"  class="red" type="button">excluir</button>
+            </td>
+            </tr>
+            </tbody>
+          </table>
+
+        <div class="modalu" id="modalu">
+            <div class="modalu-content">
+                <header class="modalu-header">
+                <h2> Cadastro Produto</h2>
+                <span class="material-icons" id="modaluClose">highlight_off</span>
+            </header>
+            <form class="modalu-form">
+
+                <div class="fabricante">
+            <label>Fabricante</label>
+            <input type="text" class="modalu-field" placeholder="Digite o nome do fabricante">
+            <label>Cetegoria</label>
+            <input type="text" class="modalu-field" placeholder="Digite o nome da categoria 1">
+            <input type="text" class="modalu-field" placeholder="Digite o nome da categoria 2">
+            <input type="text" class="modalu-field" placeholder="Digite o nome da categoria 3">
+        </div>
+
+                <div class="produto">
+            <label>Nome do Produto</label>
+            <input type="text"  id="nomeProduto"class="modalu-field" placeholder="Digite o Nome do Produto">
+            <label>Fabricante</label>
+            <select>
+                <option>Selecione o Fabricante</option>
+            </select>
+            <label>Categoria</label>
+            <select>
+                <option>Selecione a categoria </option>
+            </select>
+            <label>Preço</label>
+            <input type="text"  id="precoProd"class="modalu-field" placeholder="Digite o preço">
+        </div>
+
+        </form>
+        <footer class="modalu-footer">
+            <button  #id="btSalva" class="bt_edit">Salvar</button>
+            <button>Cancelar</button>
+        </footer>
+    </div>
+    </div>
+    <button  id="bt_cadastro" class="botao blue mobile" type="button">Adicionar Produto</button>
+
+    </main>
+    <footer>
+        copyright &copy; Luan Lopes da Silva
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
